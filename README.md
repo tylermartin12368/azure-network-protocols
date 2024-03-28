@@ -25,10 +25,10 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <h2>High-Level Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Step 1: Create Azure Virtual Machines. Make one virtual machine operate on Windows and the other on Linux.
+- Step 2: Use Remote Desktop to remote into the Azure Virtual Machine operating on Windows.
+- Step 3: Download Wireshark onto the Azure Virtual Machine. It will be used as our network analyzer.
+- Step 4: Use Wireshark and Windows Power Shell to test different protocals to observe what traffic occurs.
 
 <h2>Actions and Observations</h2>
 
