@@ -35,7 +35,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 ![Screenshot (1)](https://github.com/tylermartin12368/azure-network-protocols/assets/161632103/10c93696-e899-4565-ba16-5792bb2b718a)
 </p>
 <p>
-The first step we are going to do is create our Azure Virtual Machines. In order to do this we will need to create a resource group before creating the virtual machines. We create our virtual machines into our newly created resource group, so that we can manage these resources in one area. When creating the Azure Virtual machines, we will need to make sure that they are on diffrent operating systems (Windows and Linux) and are on the same virtual network. If they are not on the same virtual network, then when using the ssh protocal (later in the lab) you won't be able to communicate with your other virtual machine. 
+The first step we are going to do is create our Azure Virtual Machines. In order to do this we will need to create a resource group before creating the virtual machines. We create our virtual machines into our newly created resource group, so that we can manage these resources in one area. When creating the Azure Virtual machines, we will need to make sure that they are on diffrent operating systems (Windows and Linux) and are on the same virtual network. 
 </p>
 <br />
 
