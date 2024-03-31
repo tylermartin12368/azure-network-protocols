@@ -28,21 +28,21 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 - Step 1: Create Azure Virtual Machines. Make one virtual machine operate on Windows and the other on Linux.
 - Step 2: Use Remote Desktop to remote into the Azure Virtual Machine operating on Windows.
 - Step 3: Download Wireshark onto the Azure Virtual Machine. It will be used as our network analyzer.
-- Step 4: Use Wireshark and Windows Power Shell to test different protocals to observe what traffic occurs.
+- Step 4: Use Wireshark and Windows Powershell to test different protocals to observe what traffic occurs.
 
 <h2>Actions and Observations</h2>
 
 ![Screenshot (1)](https://github.com/tylermartin12368/azure-network-protocols/assets/161632103/10c93696-e899-4565-ba16-5792bb2b718a)
 </p>
 <p>
-The first step we are going to do is create our Azure Virtual Machines. In order to do this we will need to create a resource group before creating the virtual machines. We create our virtual machines into our newly created resource group, so that we can manage these resources in one area. When creating the Azure Virtual machines, we will need to make sure that they are on diffrent operating systems (Windows and Linux) and are on the same virtual network. If they are not on the same virtual network, then when using the ssh protocal you will not be able to communicate with your other virtual machine. 
+The first step we are going to do is create our Azure Virtual Machines. In order to do this we will need to create a resource group before creating the virtual machines. We create our virtual machines into our newly created resource group, so that we can manage these resources in one area. When creating the Azure Virtual machines, we will need to make sure that they are on diffrent operating systems (Windows and Linux) and are on the same virtual network. If they are not on the same virtual network, then when using the ssh protocal (later in the lab) you won't be able to communicate with your other virtual machine. 
 </p>
 <br />
 
 ![Screenshot (2)](https://github.com/tylermartin12368/azure-network-protocols/assets/161632103/2ace5ab2-14bc-4945-adc5-5c71edf13f4f)
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Once our Azure Virtual Machines are up and running, then we can use remote desktop and remote into the virtual machine that is operating on Windows. Once remoted into the virtual machine, then we will need to download Wireshark. Wireshark will allow us to observe different kinds of traffic when using different protocals. We will use Windows Powershell to enter commands to generate traffice between both virtual machines. We can use Windows Powershell to observe all sorts of traffic like ICMP. We use this protocol in order to make sure that data the we are sending is getting to its destination. We can create an Inbound Security Rule on the virtual machine operating on Linux, to deny all ICMP traffic. When this rule is created you will start to notice that you will get "no response found" error. That is a result of data not being able to arrive at its destination anymore due to this rule being created.   
 </p>
 <br />
 
