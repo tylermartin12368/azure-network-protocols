@@ -35,20 +35,20 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 ![Screenshot (1)](https://github.com/tylermartin12368/azure-network-protocols/assets/161632103/10c93696-e899-4565-ba16-5792bb2b718a)
 </p>
 <p>
-The first step we are going to do is create our Azure Virtual Machines. In order to do this we will need to create a Resource Group. We create our virtual machines into our newly created Resource Group, so that we can manage these resources in one area. When creating the Azure Virtual Machines, we will need to make sure that they are on diffrent operating systems (Windows and Linux) and are on the same virtual network. 
+The first step we are going to do is create our Azure Virtual Machines. In order to do this we will need to create a Resource Group. We create our virtual machines into our newly created Resource Group, so that we can manage these resources in one area. When creating the Azure Virtual Machines, we will need to make sure that they are on diffrent operating systems (Windows and Linux) and are on the same Virtual Network. 
 </p>
 <br />
 
 ![Screenshot (2)](https://github.com/tylermartin12368/azure-network-protocols/assets/161632103/2ace5ab2-14bc-4945-adc5-5c71edf13f4f)
 </p>
 <p>
-Once our Azure Virtual Machines are up and running, then we can use remote desktop and remote into VM1. Once remoted into VM1, then we will need to download Wireshark. Wireshark will allow us to observe different kinds of traffic when using different protocals. We will use Windows Powershell to enter commands to generate traffice between both virtual machines. ICMP is an example of a protocal that we can use to observe traffic in Wireshark. We use this protocol in order to test the connectivity over the network. Let's say we want to test the connectivity of VM1 and VM2. In Windows PowerShell, a ping test can be done to test the connection between both virtual machines by pinging the Private IP address of VM2 in Windows PowerShell. We can create an Inbound Security Rule on VM2, to deny all ICMP traffic. When this rule is created you will start to notice that you will get a "no response found" error. It's failing as a result of the Network Security Groups blocking the traffic that is being sent from VM1.    
+Once our Azure Virtual Machines are up and running, then we can use remote desktop and remote into VM1. Once remoted into VM1, then we will need to download Wireshark. Wireshark will allow us to observe different kinds of traffic when using different protocals. We will use Windows Powershell to enter commands to generate traffice between both virtual machines. ICMP is an example of a protocal that we can use to observe traffic in Wireshark. We use this protocol in order to test the connectivity over the network. Let's say we want to test the connectivity of VM1 to VM2. In Windows PowerShell, a ping test can be done to test the connection between both virtual machines by pinging the Private IP address of VM2 in Windows PowerShell. We can create an Inbound Security Rule on VM2, to deny all ICMP traffic. When this rule is created you will start to notice that you will get a "no response found" error. It's failing as a result of the Network Security Groups blocking the traffic that is being sent from VM1.    
 </p>
 <br />
 
 ![20240318_221406](https://github.com/tylermartin12368/azure-network-protocols/assets/161632103/faaed625-b8d7-4489-811f-c4aa3ed97408)
 </p>
 <p>
-DNS traffic is also something that we can observe. DNS is used to convert domain names into IP addresses that you can then use to browse through that domain. An example of a domain would be netflix.com. We enter the domain in our browser which will pull the IP address of that domain and then it will send a response back to our IP address. This is what allows us to browse through websites. We can see this take action in Wireshark when we use nslookup on specific domains through Windows Powershell. Information is being sent to the IP address of the domain we are trying to interact with and is sending information back to our IP address.  
+DNS traffic is also something that we can observe. DNS is used to convert domain names into IP addresses that you can then use to browse through that domain. An example of a domain would be netflix.com. We enter the domain in our browser which will pull the IP address of that domain and will allow us to connect to the domain. This is what allows us to browse through websites. We can see this take action in Wireshark when we use nslookup on specific domains through Windows Powershell. When we nslookup a domain, we are asking nslookup to tell us what the IP address of google.com is and it gives us a response.  
 </p>
 <br />
